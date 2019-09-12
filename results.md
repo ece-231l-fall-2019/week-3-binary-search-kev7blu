@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Found 237/1999 values.
 Time to linear search all values: 1.48532s
 Found 237/1999 values.
@@ -48,4 +47,3 @@ linearsearch vector with ops is the fastest and the slowest one is the binarysea
 |6        | Binarysearch pointer | 1.69741s     | yes |
 |7        | Binarysearch pointer | 2.4399s      | no  |
 |8        | Binarysearch vector  | 2.58028s     | no  |
->>>>>>> a4c715846958b8c356d0b5ca1aea275e3f8e2e3f

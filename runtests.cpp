@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 
+#include "sort.h"
 #include "Timer.h"
 #include "search.h"
 
@@ -30,6 +31,12 @@ int main()
 
 	green("numbers", numbers);
 	green ("search", search);
+
+	bubblesort(search.data(), search.data() + search.size());
+	for (size_t i = 0; i < search.size(); i++)
+	{
+		std::cout << search[i] << std::endl;
+	}
 
 	// TODO:
 	// read the file "numbers" into the numbers vector
@@ -67,10 +74,7 @@ int main()
 			<< search.size() << " values." << std::endl;
 	}
 
-	// TODO:
-	// repeat the above two blocks but use the binary search functions.
-
-
+	// binarysearches
 
 	{
                 Timer timer("Time to binary search all values: ");
@@ -100,5 +104,39 @@ int main()
                 std::cout << "Found "<< found << "/"
                         << search.size() << " values." << std::endl;
         }
+
+	//binaryrecurvisesearch
+	 {
+                Timer timer("Time to binary search recursive all values (pointers): ");
+
+                int found = 0;
+                for (size_t i = 0; i < search.size(); i++)
+                {
+                        if (binarySearchrecursive(numbers.data(), numbers.data() + numbers.size(),
+                                        search[i]))
+                                found++;
+                }
+
+                std::cout << "Found "<< found << "/"
+                        << search.size() << " values." << std::endl;
+        }
+
+	//bubblesort
+/*	
+	{
+		Timer timer("Time to bubble sort all values (pointers): ");
+
+		int found = 0;
+		for (size_t i = 0; i < search.size(); i++)
+		{
+			if (bubblesort(numbers.data(), numbers.data() + numbers.size(),
+					search[i]))
+				found++;
+		}
+
+		std::cout << "Found "<< found << "/"
+			<< search.size() << " values." << std::endl;
+	}
+*/
 	return 0;
 }

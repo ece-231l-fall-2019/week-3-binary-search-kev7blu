@@ -34,7 +34,7 @@ bool binarySearch(const int *begin, const int *end, int value)
 	while(begin < end)
 	{
 		const int *mid = begin + (end - begin) / 2;
-		if (*mid == *end)
+		if (mid == end)
 			return false;	
 		if (*mid == value)
 			return true;
@@ -78,4 +78,3 @@ bool binarySearchrecursive(const int *begin, const int *end, int value)
 
         return binarySearchrecursive(begin, end, value);
 }
-

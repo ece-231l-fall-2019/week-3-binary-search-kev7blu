@@ -121,22 +121,5 @@ int main()
                         << search.size() << " values." << std::endl;
         }
 
-	//bubblesort
-/*	
-	{
-		Timer timer("Time to bubble sort all values (pointers): ");
-
-		int found = 0;
-		for (size_t i = 0; i < search.size(); i++)
-		{
-			if (bubblesort(numbers.data(), numbers.data() + numbers.size(),
-					search[i]))
-				found++;
-		}
-
-		std::cout << "Found "<< found << "/"
-			<< search.size() << " values." << std::endl;
-	}
-*/
 	return 0;
 }
